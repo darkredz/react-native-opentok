@@ -1,5 +1,7 @@
 package com.rnopentok;
 
+import android.util.Log;
+
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -14,6 +16,7 @@ public class RNOpenTokModule extends ReactContextBaseJavaModule {
         super(context);
 
         RNOpenTokSessionManager.initSessionManager(context);
+        RNOpenTokSessionManager.getSessionManager().disconnectAllSessions();
         reactContext = context;
     }
 
