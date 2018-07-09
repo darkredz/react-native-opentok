@@ -63,6 +63,10 @@ public class RNOpenTokSessionManager implements Session.SessionListener, Session
         return RNOpenTokSessionManager.initSessionManager(null);
     }
 
+    public void setApiKey(String apiKey) {
+        this.mApiKey = apiKey;
+    }
+
     public Session connectToSession(String sessionId, String token) {
 //        this.disconnectSession(sessionId);
 //        if (this.mSessions.get(sessionId) != null) {
